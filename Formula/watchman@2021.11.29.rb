@@ -1,4 +1,4 @@
-class Watchman < Formula
+class WatchmanAT20211129 < Formula
   desc "Watch files and take action when they change"
   homepage "https://github.com/facebook/watchman"
   url "https://github.com/facebook/watchman/archive/v2021.11.29.00.tar.gz"
