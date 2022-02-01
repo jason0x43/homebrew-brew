@@ -6,18 +6,6 @@ class Watchman20211129 < Formula
   license "MIT"
   head "https://github.com/facebook/watchman.git", branch: "main"
 
-  bottle do
-    sha256 cellar: :any, arm64_monterey: "a59de4c61d10a2217839f97bd9d239d9db3453c6eac3e21a62a20ecb6811b549"
-    sha256 cellar: :any, arm64_big_sur:  "63ea29e0a299a899d154beedde13b71566ce7754ea186ec717a65fb0aa685f99"
-    sha256 cellar: :any, monterey:       "1b53c1dd613a5a65a49b3afb6b733c242e16170810a7ef3c03303aca2a0ea03d"
-    sha256 cellar: :any, big_sur:        "0476f53db47bdb4761749b1de79c3365fe0bb66c7f496bb205b5c0a8c135a8d9"
-    sha256 cellar: :any, catalina:       "6237e7163106ac456a16a5de92544905444f50b9a8244848ecd5992e919753ac"
-    sha256               x86_64_linux:   "8fb9303967970fc10abc01d0846779bcd5667cc810a11a657fd82d308a0ec8f6"
-  end
-
-  # https://github.com/facebook/watchman/issues/963
-  pour_bottle? only_if: :default_prefix
-
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
